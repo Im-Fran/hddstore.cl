@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-3xl: 120rem; /* 1920px */
+  --breakpoint-4xl: 160rem; /* 2560px */
+
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+
+  /* Paleta de marca (HDD Tecnología Store) — reutilizada en todas las
+     secciones de la landing, ver src/pages/landing/components. */
+  --color-ink: #0a0d12;
+  --color-ink-soft: #0d1117;
+  --color-paper: #f4f5f7;
+  --color-mist: #eef1f5;
+  --color-brand: #2f6fed;
+  --color-brand-light: #4c81f5;
+  --color-brand-dark: #1e40af;
+  --color-accent: #1d4ed8;
+  --color-muted: #7c8794;
+
+  --animate-hd-blink: hd-blink 1s step-start infinite;
+}
+
+@keyframes hd-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hd-marquee-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+body {
+  background: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* La landing (src/pages/landing) es la única vista de la SPA y todos sus
+   enlaces son botones/links de navegación con su propio color por className;
+   Preflight no quita el subrayado por defecto de <a>, así que se quita acá
+   una sola vez en vez de repetir `no-underline` en cada enlace. */
+@layer base {
+  a {
+    text-decoration: none;
+  }
+}
+
+::selection {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+/* El fullpage scroll ahora lo gestiona fullpage.js (ver src/pages/landing).
+   Se deja scroll-behavior: smooth para el scroll normal hacia Footer, que
+   queda fuera del contenedor de fullpage.js. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
