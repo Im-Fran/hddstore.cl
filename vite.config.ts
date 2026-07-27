@@ -5,6 +5,8 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
 
+import { cloudflare } from '@cloudflare/vite-plugin'
+
 // fullpage.js es dependencia transitiva de @fullpage/react-fullpage (no está
 // en package.json). pnpm no la deja resolvible como import directo, así que
 // resolvemos su ruta real en disco a través del paquete que sí instalamos.
@@ -18,7 +20,8 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    babel({ presets: [reactCompilerPreset()] })
+    babel({ presets: [reactCompilerPreset()] }),
+    cloudflare(),
   ],
   resolve: {
     alias: {

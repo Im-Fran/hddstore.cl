@@ -3,3 +3,6 @@ packages:
 
 allowBuilds:
   core-js: true
+  esbuild: set this to true or false
+  protobufjs: true
+  workerd: set this to true or false

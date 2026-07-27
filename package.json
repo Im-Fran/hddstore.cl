@@ -4,14 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "wrangler dev",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@cloudflare/vite-plugin": "^1.47.0",
     "@fullpage/react-fullpage": "^0.1.49",
     "@tailwindcss/vite": "^4.3.3",
+    "@vidstack/react": "^1.15.6",
     "lucide-react": "^1.26.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -19,6 +24,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
+    "@cloudflare/workers-types": "^5.20260726.1",
     "@rolldown/plugin-babel": "^0.2.3",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.13.3",
@@ -28,6 +34,7 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "oxlint": "^1.75.0",
     "typescript": "~6.0.3",
-    "vite": "^8.1.5"
+    "vite": "^8.1.5",
+    "wrangler": "^4.114.0"
   }
 }

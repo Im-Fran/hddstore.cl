@@ -1,6 +1,5 @@
 import { MenuIcon, XIcon } from 'lucide-react'
 import { useState } from 'react'
-import hdLogo from '@/assets/hd-logo.png'
 import { SECTIONS, WHATSAPP_URL } from './constants'
 
 interface NavProps {
@@ -17,7 +16,7 @@ export function Nav({ activeId, typed, onNavigate }: NavProps) {
       <div className="flex items-center justify-between gap-4 px-4 py-3 lg:px-7">
         <div className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 flex-none items-center justify-center overflow-hidden rounded-md bg-white">
-            <img src={hdLogo} alt="Logo HDD Tecnología Store" className="size-7.5 object-contain" />
+            <img src={"/media/hd-logo.webp"} alt="Logo HDD Tecnología Store" className="size-7.5 object-contain" />
           </div>
           <div className="flex flex-col leading-[1.05]">
             <span className="font-mono text-sm font-bold tracking-[0.03em] text-white">HDD</span>

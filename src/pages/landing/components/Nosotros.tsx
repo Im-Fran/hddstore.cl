@@ -1,5 +1,3 @@
-import googleBadge from '@/assets/google-badge.jpg'
-
 interface Testimonial {
   quote: string
   name: string
@@ -49,7 +47,7 @@ export function Nosotros() {
         <div className="flex flex-col gap-2 lg:gap-3.5">
           <div className="hidden items-center gap-2.5 lg:flex">
             <img
-              src={googleBadge}
+              src={"/media/google-badge.webp"}
               alt="Clientes satisfechos Google"
               className="size-8.5 rounded object-cover"
             />
