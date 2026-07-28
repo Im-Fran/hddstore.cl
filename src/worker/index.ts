@@ -31,6 +31,22 @@ async function getReviews(placeId: string, apiKey: string): Promise<Response> {
   return Response.json(data, { headers: jsonHeaders })
 }
 
+interface InstagramStats {
+  followers: number
+  posts: number
+}
+
+// Datos mock — reemplazar por integración real con Instagram Graph API
+// (requiere cuenta Business/Creator, Facebook App y token de larga
+// duración) cuando esté disponible.
+const MOCK_INSTAGRAM_STATS: InstagramStats = { followers: 3200, posts: 180 }
+
+function getInstagramStats(): Response {
+  return Response.json(MOCK_INSTAGRAM_STATS, {
+    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+  })
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url)
@@ -41,6 +57,10 @@ export default {
         return new Response('Se debe configurar el ID del lugar', { status: 500 })
       }
       return getReviews(placeId, env.GOOGLE_PLACES_API_KEY)
+    }
+
+    if (url.pathname === '/api/instagram-stats') {
+      return getInstagramStats()
     }
 
     return new Response('Not found', { status: 404 })
