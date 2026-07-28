@@ -1,34 +1,4 @@
-import { PanelsTopLeftIcon, WrenchIcon, MemoryStickIcon, PcCaseIcon } from 'lucide-react'
-import { WHATSAPP_URL } from './constants'
-
-interface Service {
-  title: string
-  desc: string
-  icon: React.ExoticComponent<React.SVGProps<SVGSVGElement>>
-}
-
-const SERVICES: Service[] = [
-  {
-    title: 'SOPORTE TÉCNICO',
-    desc: 'Mantenimiento de torre y notebook, instalación de OS, formateo, instalación de programas y remoción de virus.',
-    icon: WrenchIcon,
-  },
-  {
-    title: 'REPARACIÓN Y MEJORAS',
-    desc: 'Diagnóstico de fallas, reparación de componentes y mejoras de rendimiento en equipos de escritorio y portátiles.',
-    icon: PanelsTopLeftIcon,
-  },
-  {
-    title: 'VENTA DE HARDWARE',
-    desc: 'Componentes, periféricos y notebooks reacondicionados con garantía y respaldo técnico.',
-    icon: MemoryStickIcon,
-  },
-  {
-    title: 'COMPUTADORES A MEDIDA',
-    desc: 'Armado de PCs personalizadas para oficina y gaming, según presupuesto y uso real.',
-    icon: PcCaseIcon,
-  },
-]
+import { SERVICES, WHATSAPP_URL } from './constants'
 
 const ServiciosSection = () =>{
   return (

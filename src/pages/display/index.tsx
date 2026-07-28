@@ -1,5 +1,6 @@
 import { useGoogleReviews } from '@/pages/landing/components/useGoogleReviews'
 import { ContactoSlide } from './components/ContactoSlide'
+import { DisplayFooter } from './components/DisplayFooter'
 import { DisplayHeader } from './components/DisplayHeader'
 import { ReviewsColumn } from './components/ReviewsColumn'
 import { StatsSlide } from './components/StatsSlide'
@@ -31,6 +32,7 @@ const DisplayPage = () => {
         </div>
         <ReviewsColumn placeData={placeData} />
       </div>
+      <DisplayFooter />
     </div>
   )
 }
