@@ -18,15 +18,17 @@ async function getReviews(placeId: string, apiKey: string): Promise<Response> {
     headers: { 'X-Goog-Api-Key': apiKey },
   })
 
+  const jsonHeaders = { 'Content-Type': 'application/json; charset=utf-8' }
+
   if (!googleResponse.ok) {
     return Response.json(
       { error: 'No se pudieron obtener las reseñas' },
-      { status: googleResponse.status },
+      { status: googleResponse.status, headers: jsonHeaders },
     )
   }
 
   const data = (await googleResponse.json()) as PlacesReviewsResponse
-  return Response.json(data)
+  return Response.json(data, { headers: jsonHeaders })
 }
 
 export default {
