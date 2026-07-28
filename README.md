@@ -12,7 +12,7 @@
 
 Sitio de una sola página para **HDD Tecnología Store**, construido con React 19 + TypeScript sobre Vite. Toda la navegación ocurre dentro de un scroll a pantalla completa por sección (`@fullpage/react-fullpage`), con el ítem activo del nav "escribiéndose" letra por letra a medida que el usuario avanza.
 
-No hay backend ni base de datos: es un sitio estático de marketing con enlaces directos a WhatsApp, Instagram y Google Maps.
+Es principalmente un sitio estático de marketing con enlaces directos a WhatsApp, Instagram y Google Maps; las reseñas son la excepción, se sirven desde un Cloudflare Worker con base de datos D1 (`/api/reviews`), sincronizada a diario desde Google Places.
 
 ---
 
