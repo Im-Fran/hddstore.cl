@@ -29,6 +29,8 @@ dist-ssr
 
 # Claude
 .claude/worktrees/*
+.superpowers/
+docs/
 
 # Cloudflare
 .wrangler
