@@ -31,6 +31,6 @@ dist-ssr
 .claude/worktrees/*
 
 # Cloudflare
-.*.vars
-!.dev.vars.example
 .wrangler
+.dev.vars*
+!.dev.vars.example
