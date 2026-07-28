@@ -16,5 +16,16 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
-  ]
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hddstore-reviews",
+      "database_id": "628384d7-befd-49e0-a710-4b5c5d03d4ac",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": {
+    "crons": ["0 6 * * *"]
+  }
 }
