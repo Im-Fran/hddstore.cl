@@ -1,7 +1,4 @@
-interface Env {
-  GOOGLE_PLACES_API_KEY: string;
-  GOOGLE_PLACE_ID: string;
-}
+import type { Env } from './env'
 
 interface PlacesReviewsResponse {
   reviews?: unknown[]
