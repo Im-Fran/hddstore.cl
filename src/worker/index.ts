@@ -1,4 +1,5 @@
 import type { Env } from './env'
+import { syncReviews } from './sync'
 
 interface PlacesReviewsResponse {
   reviews?: unknown[]
@@ -61,5 +62,9 @@ export default {
     }
 
     return new Response('Not found', { status: 404 })
+  },
+
+  async scheduled(_event, env, ctx) {
+    ctx.waitUntil(syncReviews(env))
   },
 } satisfies ExportedHandler<Env>
