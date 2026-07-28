@@ -1,4 +1,4 @@
-import { MAPS_URL } from './constants'
+import { ADDRESS, HOURS_SATURDAY, HOURS_WEEKDAYS, MAPS_URL } from './constants'
 
 export function Ubicacion() {
   return (
@@ -13,15 +13,15 @@ export function Ubicacion() {
             <div>
               <span className="font-mono text-[11px] font-semibold tracking-widest text-[#8b94a1]">DIRECCIÓN</span>
               <p className="mt-1.5 mb-0 font-sans text-[17px] leading-[1.4] font-semibold text-[#0f1319]">
-                Av. Rodrigo de Araya 3076, Ñuñoa, Santiago
+                {ADDRESS}
               </p>
             </div>
             <div>
               <span className="font-mono text-[11px] font-semibold tracking-widest text-[#8b94a1]">HORARIO</span>
               <p className="mt-1.5 mb-0 font-sans text-[15px] leading-[1.7] text-[#454e59]">
-                Lunes a Viernes · 11:00–19:30
+                {HOURS_WEEKDAYS}
                 <br />
-                Sábado · 11:00–15:00
+                {HOURS_SATURDAY}
               </p>
             </div>
             <a

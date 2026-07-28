@@ -1,4 +1,4 @@
-import { INSTAGRAM_URL, WHATSAPP_URL } from './constants'
+import { INSTAGRAM_URL, WHATSAPP_PHONE_LABEL, WHATSAPP_URL } from './constants'
 
 // Vive dentro de `.contactoSection` (ver pages/landing/index.tsx), que ya
 // fuerza el 100dvh de la sección de fullpage.js — por eso usa flex-1/min-h-0
@@ -22,7 +22,7 @@ export function Contacto() {
             aria-label="Escribir por WhatsApp"
             className="rounded-[3px] bg-accent px-6.5 py-4 font-mono text-sm font-bold text-white hover:bg-brand-dark"
           >
-            WHATSAPP +56 9 6199 1725
+            WHATSAPP {WHATSAPP_PHONE_LABEL}
           </a>
           <a
             href={INSTAGRAM_URL}
