@@ -97,7 +97,7 @@ export function Nosotros() {
             <div className="h-px flex-1 bg-black/10" />
           </div>
           <h2 className="m-0 mb-3 font-mono text-2xl leading-[1.15] font-extrabold tracking-[-0.01em] lg:mb-5 lg:text-[32px]">
-            TÉCNICOS DEL BARRIO1,
+            TÉCNICOS DEL BARRIO,
             <br />
             NO CALL CENTER.
           </h2>
